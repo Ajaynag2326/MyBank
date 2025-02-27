@@ -21,7 +21,7 @@ function showHeader()
           </div>
         </div>
   `;
-  header.innerHTML = str;
+  header.innerHTML = str; 
 }
 function showUser() {
   if (document.getElementById("type").value == "3") {
@@ -80,17 +80,17 @@ function home() {
   showHeader();
   let str = `
    <div class="w-100  text-center m-5 p-5 rounded-3 bg-light">
-      <h3>Welcome ${user.name}</h3>
+     <h3>Welcome ${user.name}</h3>
       <button onclick='showLogin()'>Logout</button>
-      <p><select id="type" onchange='showUser()'>
+      <p><select id="type" class="form-control" onchange='showUser()'>
          <option value=0>--Select--</option>
          <option value=1>Deposit</option>
          <option value=2>Withdraw</option>
          <option value=3>Transfer</option>
          </select></p>
-         <p><select style="display:none" id="selUser"></select></p>
-         <p><input type="number" id="amount" placeholder="Enter Amount"></p>
-         <button onclick='saveData()'>Submit</button>
+         <p><select style="display:none" id="selUser" class="form-control"></select></p>
+         <p><input type="number" id="amount" class="form-control" placeholder="Enter Amount"></p>
+         <button onclick='saveData()' class="form-control btn btn-success">Submit</button>
          <p><b>Current Balance: <span id='spBalance'>${user.balance}</span></b></p>
     </div>
       `;
